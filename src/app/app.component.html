@@ -1,0 +1,43 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<!-- As a heading -->
+<nav class="navbar navbar-dark bg-dark">
+    <span class="navbar-brand mb-0 h1">Doggo Classifier</span>
+</nav>
+
+<div class="container">
+    <div class="row">
+      <div class="col-sm-4 column">
+        <h3>Select Image</h3>
+        <img [src]="selectedImageUrl" style="width: 40vh; height: 40vh;" class="rounded selected-img">
+        <input type="file" class="form-control-file" id="fileUpload" accept="image/*" 
+        (change)="readUrl($event)">
+        <div class="row" style="margin-top: 1em">
+            <div class="col-sm column" style="text-align: center; margin: 1% 1% 1% 1%;" >
+                <button type="button" class="btn btn-primary" (click)="onPredict()">Predict</button>
+            </div>
+        </div>
+      </div>
+      <div class="col-sm column">
+          <h3>Prediction Results</h3>
+          <p>{{predictionResult}}</p>
+      </div>
+    </div>
+
+    <!-- <div class="row">
+        <div class="col-sm column">
+          <h3>Test Images</h3>
+
+          <div class="row" *ngFor="let i of testImages">
+            <div class="col-sm column">
+                <img [src]="i[0]" style="width: 30vh; height: 30vh;" class="rounded selected-img">
+            </div>
+            <div class="col-sm column">
+                <img [src]="i[1]" style="width: 30vh; height: 30vh;" class="rounded selected-img">
+            </div>
+            <div class="col-sm column">
+                <img [src]="i[2]" style="width: 30vh; height: 30vh;" class="rounded selected-img">
+            </div>
+          </div>
+        </div>
+    </div> -->
+</div>
